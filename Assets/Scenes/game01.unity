@@ -273,8 +273,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434218528}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1354397212}
+        m_TargetAssemblyTypeName: UIClearPopUp, Assembly-CSharp
         m_MethodName: GoToEnding
         m_Mode: 1
         m_Arguments:
@@ -704,6 +704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7081b65023df81f48bb4ca259af6edde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtEnermyHpValue: {fileID: 1530627779}
+  SlidEnermyHP: {fileID: 712629100}
 --- !u!114 &369658099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,7 +767,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &434218527
 GameObject:
@@ -796,28 +798,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3e6a7eb3f1ae44ebb023c0cd73fb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnimater: {fileID: 941490515}
-  enemyTransform: {fileID: 1344562388}
-  enemyHP: 100
-  enemyAtk: 20
-  txtEnermyHpValue: {fileID: 1530627779}
-  SlidEnermyHP: {fileID: 712629100}
   playerHP: 100
   playerMp: 50
-  playerAtk1: 20
-  playerCost1: 0
-  playerAtk2: 40
-  playerCost2: 20
-  txtHpValue: {fileID: 1286820121}
-  HpSlid: {fileID: 339198013}
-  txtMpValue: {fileID: 739717838}
-  MpSlid: {fileID: 693128983}
-  uiClearPopup: {fileID: 961237418}
-  effectName1: Particles/Hit1
-  effectName2: Particles/Hit2
-  audio1: {fileID: 613781373}
-  audio2: {fileID: 1038875492}
+  playerAtk: 140000002800000032000000
+  playerCost: 000000001400000064000000
+  effectName:
+  - Resources/Hit1
+  - Resources/Hit2
+  - Resources/Hit2
+  Audio: []
   canAttack: 1
+  enemy: {fileID: 1344562389}
+  uiUserInfo: {fileID: 1883909575}
 --- !u!4 &434218529
 Transform:
   m_ObjectHideFlags: 0
@@ -2218,7 +2210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &961237419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3429,11 +3421,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1344562389}
   m_SourcePrefab: {fileID: 100100000, guid: 11eed2dfd1329ab4db9e7f27b8e628b7, type: 3}
---- !u!4 &1344562388 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6312573360258431772, guid: 11eed2dfd1329ab4db9e7f27b8e628b7, type: 3}
-  m_PrefabInstance: {fileID: 1344562387}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1344562389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,6 +3433,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5c55ece3c89dc4fa250e8eddab8f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 434218528}
+  uienemyInfo: {fileID: 369658098}
+  uiClearPopUp: {fileID: 1354397212}
+  enemyAnimater: {fileID: 941490515}
+  enemyHP: 100
+  enemyAtk: 20
 --- !u!1 &1354397211
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,7 +3458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1354397212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,10 +3529,10 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1354397216
 RectTransform:
@@ -4144,7 +4137,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1883909574
 RectTransform:
@@ -4178,6 +4171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4833e8987458546aa5e15931a0b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtHpValue: {fileID: 1286820121}
+  HpSlid: {fileID: 339198013}
+  txtMpValue: {fileID: 739717838}
+  MpSlid: {fileID: 693128983}
 --- !u!1 &1902072296
 GameObject:
   m_ObjectHideFlags: 0
