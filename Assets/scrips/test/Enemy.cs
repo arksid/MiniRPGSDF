@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
             enemyHP = 0;
             uiClearPopUp.gameObject.SetActive(true);
         }
-        Invoke(nameof(EnemyAttack), 2);
+        Invoke("EnemyAttack", 2);
         uienemyInfo.ChangeEnemyInfo(enemyHP);
     }
 }

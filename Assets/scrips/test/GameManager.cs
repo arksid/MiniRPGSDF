@@ -35,11 +35,11 @@ public class GameManager : MonoBehaviour
 
 
     //플래이어공격1
-    public void Attack(int index)
+    public void Attack(int index )
     {
         int playerCost = this.playerCost[index]; 
         int playerAtk = this.playerAtk[index];
-        string EffectName = effectName[index];
+        string EffectName = this.effectName[index];
         AudioSource audio = this.Audio[index];
         if (canAttack== false)
             return;
@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
         //4초후 공격가능 Invoke
         Invoke(nameof(DelayReset), 4);
         
-
     }
     
    

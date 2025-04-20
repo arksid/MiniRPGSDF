@@ -800,13 +800,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHP: 100
   playerMp: 50
-  playerAtk: 140000002800000032000000
-  playerCost: 000000001400000064000000
+  playerAtk: 1400000028000000
+  playerCost: 0000000014000000
   effectName:
   - Resources/Hit1
   - Resources/Hit2
-  - Resources/Hit2
-  Audio: []
+  Audio:
+  - {fileID: 613781373}
+  - {fileID: 1038875492}
   canAttack: 1
   enemy: {fileID: 1344562389}
   uiUserInfo: {fileID: 1883909575}
@@ -2688,12 +2689,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 434218528}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Attack2
-        m_Mode: 1
+        m_MethodName: Attack
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4432,8 +4433,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 434218528}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Attack1
-        m_Mode: 1
+        m_MethodName: Attack
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
